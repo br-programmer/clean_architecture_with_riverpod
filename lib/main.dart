@@ -1,5 +1,6 @@
-import 'package:clean_architecture_with_riverpod/screens/screens.dart';
 import 'package:flutter/material.dart';
+
+import 'screens/screens.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
