@@ -1,6 +1,6 @@
-import 'package:clean_architecture_with_riverpod/extensions/extensions.dart';
 import 'package:flutter/material.dart';
 
+import '../extensions/extensions.dart';
 import 'auth_screen.dart';
 
 class SplashScreen extends StatefulWidget {
