@@ -1,7 +1,8 @@
-import 'package:clean_architecture_with_riverpod/extensions/extensions.dart';
-import 'package:clean_architecture_with_riverpod/screens/screens.dart';
-import 'package:clean_architecture_with_riverpod/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+
+import '../extensions/extensions.dart';
+import '../widgets/widgets.dart';
+import 'screens.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
