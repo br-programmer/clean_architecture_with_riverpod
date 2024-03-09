@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../extensions/extensions.dart';
+import '../extensions/num_x.dart';
 import '../widgets/widgets.dart';
 import 'screens.dart';
 
@@ -28,7 +29,7 @@ class AuthScreen extends StatelessWidget {
                     },
                     text: 'Login',
                   ),
-                  const SizedBox(height: 8),
+                  8.h,
                   CustomButton(
                     onPressed: () {
                       context.pushReplacementNamed(RegisterScreen.route);
@@ -62,7 +63,7 @@ class _Header extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 10),
+        10.h,
         const Text(
           'The Flutter Community',
           style: TextStyle(
@@ -72,9 +73,9 @@ class _Header extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        const SizedBox(height: 60),
+        60.h,
         Image.asset('assets/images/onboarding.png'),
-        const SizedBox(height: 68),
+        68.h,
       ],
     );
   }
