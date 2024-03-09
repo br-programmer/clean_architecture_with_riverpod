@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../extensions/extensions.dart';
+import '../extensions/num_x.dart';
 import '../widgets/widgets.dart';
 import 'screens.dart';
 
@@ -12,7 +13,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    const separator = SizedBox(height: 28);
+    final separator = 28.h;
     return Scaffold(
       body: SafeArea(
         child: Padding(
