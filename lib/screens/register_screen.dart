@@ -8,7 +8,7 @@ import 'screens.dart';
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
 
-  static String get route => '/register';
+  static const String route = '/register';
 
   @override
   Widget build(BuildContext context) {
