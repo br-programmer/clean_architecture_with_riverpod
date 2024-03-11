@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
+import '../extensions/extensions.dart';
+
 class CustomImput extends StatefulWidget {
   const CustomImput.email({
     super.key,
     this.onChanged,
     this.hint = 'Email',
     this.autovalidateMode = AutovalidateMode.onUserInteraction,
+    this.validator,
   })  : obscureText = false,
         prefixIcon = Icons.email_outlined,
         keyboardType = TextInputType.emailAddress;
@@ -15,6 +18,7 @@ class CustomImput extends StatefulWidget {
     this.onChanged,
     this.hint = 'Password',
     this.autovalidateMode = AutovalidateMode.onUserInteraction,
+    this.validator,
   })  : obscureText = true,
         prefixIcon = Icons.lock_outline,
         keyboardType = TextInputType.visiblePassword;
@@ -25,6 +29,7 @@ class CustomImput extends StatefulWidget {
   final IconData prefixIcon;
   final TextInputType keyboardType;
   final AutovalidateMode autovalidateMode;
+  final String? Function(String? value)? validator;
 
   @override
   State<CustomImput> createState() => _CustomImputState();
@@ -74,6 +79,7 @@ class _CustomImputState extends State<CustomImput> {
         onChanged: widget.onChanged,
         keyboardType: widget.keyboardType,
         autovalidateMode: widget.autovalidateMode,
+        validator: widget.validator,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.symmetric(horizontal: 8),
           border: _inputBorder(),
@@ -81,7 +87,7 @@ class _CustomImputState extends State<CustomImput> {
           enabledBorder: _inputBorder(),
           errorBorder: _inputBorder(borderColor: Colors.red),
           focusedErrorBorder: _inputBorder(borderColor: Colors.red),
-          fillColor: Theme.of(context).colorScheme.secondary,
+          fillColor: context.colorScheme.secondary,
           filled: true,
           hintText: widget.hint,
           hintStyle: const TextStyle(
