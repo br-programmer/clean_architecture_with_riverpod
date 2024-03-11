@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../extensions/extensions.dart';
-import '../extensions/num_x.dart';
 import '../widgets/widgets.dart';
 import 'screens.dart';
 
@@ -12,7 +11,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final colorScheme = context.colorScheme;
     final separator = 28.h;
     return Scaffold(
       body: SafeArea(
