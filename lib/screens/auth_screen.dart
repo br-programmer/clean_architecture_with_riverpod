@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../extensions/extensions.dart';
-import '../extensions/num_x.dart';
 import '../widgets/widgets.dart';
 import 'screens.dart';
 
@@ -35,7 +34,7 @@ class AuthScreen extends StatelessWidget {
                       context.pushReplacementNamed(RegisterScreen.route);
                     },
                     text: 'Signup',
-                    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                    backgroundColor: context.theme.scaffoldBackgroundColor,
                   ),
                 ],
               ),
@@ -59,7 +58,7 @@ class _Header extends StatelessWidget {
           'By Flutter Dev, To Flutter Dev',
           style: TextStyle(
             fontSize: 14,
-            color: Theme.of(context).colorScheme.primary,
+            color: context.colorScheme.primary,
             fontWeight: FontWeight.w600,
           ),
         ),
