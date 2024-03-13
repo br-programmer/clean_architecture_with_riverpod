@@ -16,6 +16,7 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   late final formKey = GlobalKey<FormState>();
+  var userName = '';
   var email = '';
   var password = '';
 
@@ -46,6 +47,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         fontWeight: FontWeight.bold,
                         fontSize: 24,
                       ),
+                    ),
+                    const SizedBox(height: 28),
+                    TextFormField(
+                      validator: FormValidator.userName,
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      keyboardType: TextInputType.name,
+                      decoration: const InputDecoration(
+                        hintText: 'Your username here',
+                        prefixIcon: Icon(Icons.person_outline_rounded),
+                      ),
+                      onChanged: (value) => setState(() => userName = value),
                     ),
                     const SizedBox(height: 28),
                     TextFormField(
