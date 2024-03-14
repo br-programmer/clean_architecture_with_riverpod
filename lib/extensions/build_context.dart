@@ -11,7 +11,7 @@ extension NavigatorX on BuildContext {
     return _navigator.pushReplacementNamed(routeName);
   }
 
-  Future<T?> pushAndRemoveUntil<T extends Object?>(String routeName) {
+  Future<T?> pushNamedAndRemoveUntil<T extends Object?>(String routeName) {
     return _navigator.pushNamedAndRemoveUntil(
       routeName,
       (route) => false,
