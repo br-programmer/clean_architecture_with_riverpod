@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'screens/screens.dart';
-import 'theme/theme.dart';
+import 'ui/screens/auth/auth_screen.dart';
+import 'ui/screens/home/home_screen.dart';
+import 'ui/screens/sign_in/sign_in_screen.dart';
+import 'ui/screens/sign_up/sign_up_screen.dart';
+import 'ui/screens/splash/splash_screen.dart';
+import 'ui/shared/theme/app_theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,16 +17,19 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.theme,
-      routes: <String, WidgetBuilder>{
-        SplashScreen.route: (_) => const SplashScreen(),
-        AuthScreen.route: (_) => const AuthScreen(),
-        SignInScreen.route: (_) => const SignInScreen(),
-        SignUpScreen.route: (_) => const SignUpScreen(),
-        HomeScreen.route: (_) => const HomeScreen(),
-      },
+    return GestureDetector(
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.theme,
+        routes: {
+          SplashScreen.route: (_) => const SplashScreen(),
+          AuthScreen.route: (_) => const AuthScreen(),
+          SignInScreen.route: (_) => const SignInScreen(),
+          SignUpScreen.route: (_) => const SignUpScreen(),
+          HomeScreen.route: (_) => const HomeScreen(),
+        },
+      ),
     );
   }
 }

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../extensions/extensions.dart';
-import '../validators/form_validator.dart';
-import '../widgets/widgets.dart';
-import 'screens.dart';
+import '../../shared/extensions/build_context.dart';
+import '../../shared/validators/form_validator.dart';
+import '../../shared/widgets/flutter_masters_rich_text.dart';
+import '../home/home_screen.dart';
+import '../sign_up/sign_up_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -23,6 +24,7 @@ class _SignInScreenState extends State<SignInScreen> {
     if (!formKey.currentState!.validate()) {
       return;
     }
+    context.pushNamed(HomeScreen.route);
   }
 
   @override

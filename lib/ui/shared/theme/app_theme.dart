@@ -11,6 +11,12 @@ class AppTheme {
           primary: Palette.green,
           secondary: Palette.darkGray,
         ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Palette.darkGray,
+          unselectedItemColor: Palette.darkGray,
+          selectedItemColor: Palette.green,
+          showSelectedLabels: false,
+        ),
         inputDecorationTheme: _inputDecorationTheme(),
         textSelectionTheme: const TextSelectionThemeData(
           cursorColor: Palette.green,

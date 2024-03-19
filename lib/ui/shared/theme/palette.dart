@@ -9,4 +9,5 @@ class Palette {
   static const green = Color(0xFF58AE7A);
   static const red = Color(0XFFFF0000);
   static const white = Color(0XFFFFFFFF);
+  static const pink = Color(0XFFFFAAAA);
 }

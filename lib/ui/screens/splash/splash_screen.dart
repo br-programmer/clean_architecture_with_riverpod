@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../extensions/extensions.dart';
-import 'auth_screen.dart';
+import '../../shared/extensions/build_context.dart';
+import '../auth/auth_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return const Scaffold(
       body: SafeArea(
         child: Align(
-          alignment: Alignment.bottomCenter,
+          alignment: Alignment.center,
           child: CircularProgressIndicator(),
         ),
       ),

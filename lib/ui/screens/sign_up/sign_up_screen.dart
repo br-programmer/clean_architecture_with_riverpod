@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../extensions/extensions.dart';
-import '../validators/form_validator.dart';
-import '../widgets/widgets.dart';
-import 'sign_in_screen.dart';
+import '../../shared/extensions/build_context.dart';
+import '../../shared/validators/form_validator.dart';
+import '../../shared/widgets/flutter_masters_rich_text.dart';
+import '../sign_in/sign_in_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
